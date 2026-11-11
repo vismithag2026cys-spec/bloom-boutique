@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf8;
+    color: #443535;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: white;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #b65c76;
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #443535;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #c36c83;
+}
+
+/* Hero */
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background: linear-gradient(
+        90deg,
+        #f5dce2,
+        #fff0ed
+    );
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.tagline {
+    color: #a54d69;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    line-height: 1.7;
+}
+
+.shop-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #ad5872;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Products */
+.products-section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.products-section h2,
+.cart-section h2,
+.checkout-section h2,
+.about-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #927b7b;
+    margin-bottom: 25px;
+}
+
+#search {
+    width: min(100%, 400px);
+    padding: 13px;
+    border: 1px solid #ddbdc5;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px #00000012;
+    padding-bottom: 18px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.product-card h3,
+.product-card p {
+    margin: 12px 15px;
+}
+
+.product-card button {
+    margin: 5px 15px;
+    padding: 11px 20px;
+    background: #ad5872;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cart and checkout */
+.cart-section,
+.checkout-section {
+    padding: 55px 8%;
+    background: #f9e9ec;
+    margin: 30px 0;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    border-bottom: 1px solid #dfc6cb;
+}
+
+.cart-row button {
+    padding: 6px 12px;
+    border: none;
+    background: #ad5872;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    padding: 13px 22px;
+    background: #ad5872;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-section form {
+    max-width: 500px;
+}
+
+.checkout-section input:not([type="radio"]),
+.checkout-section textarea {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 15px 0;
+    border: 1px solid #d5b7be;
+    border-radius: 5px;
+}
+
+.checkout-section label {
+    display: block;
+    margin: 15px 0;
+}
+
+.checkout-section input[type="radio"] {
+    margin-right: 8px;
+}
+
+.checkout-section textarea {
+    min-height: 100px;
+}
+
+/* About */
+.about-section {
+    padding: 60px 10%;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    padding: 35px;
+    text-align: center;
+    background: #4a3039;
+    color: white;
+    line-height: 2;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 45px 7%;
+    }
+
+    .cart-row {
+        flex-wrap: wrap;
+    }
+}
